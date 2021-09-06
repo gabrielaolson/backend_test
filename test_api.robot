@@ -12,10 +12,10 @@ endpoint: /api-web/comum/enumerations/VRPAT
 
 *** Keywords ***
 I do a get request VRPAT
-  GET               http://portal.vr.com.br/api-web/comum/enumerations/VRPAT  
-  Integer     response status           200  
-  ${validation}     Array    response body typeOfEstablishment 
-  Should not be empty      ${validation}
-  Output    $.typeOfEstablishment[0]
+  GET                    http://portal.vr.com.br/api-web/comum/enumerations/VRPAT  
+  Integer                response status           200  
+  ${validation}          Array    response body typeOfEstablishment 
+  Should not be empty    ${validation}
+  Output                 $.typeOfEstablishment[0]
   
   
